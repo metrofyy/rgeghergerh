@@ -1,8 +1,8 @@
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
 Notify({
-Description = "thatsnotmatt.cc loaded";
-Title = "made by thatsnotmatt#2602";
+Description = "Shoots anyone in circle";
+Title = "made by metrofyy#0610";
 Duration = 10;
 });
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RFS-cmd/-/main/first"))()
