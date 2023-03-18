@@ -1,53 +1,10 @@
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
-local Notify = AkaliNotif.Notify;
-Notify({
-Description = "Shoots anyone in circle";
-Title = "made by metrofyy#0610";
-Duration = 10;
-});
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RFS-cmd/-/main/first"))()
- 
-Aiming.TargetPart = {"Head"}
-Aiming.FOV = 150
-Aiming.FOVSides = 250
-Aiming.HitChance = 100
-Aiming.ShowFOV = true
-getgenv().AutoPrediction = true
-getgenv().Prediction = 0.157
--- auto prediction highly recommended...
-if getgenv().AutoPrediction == true then
-function h()
-        while true do wait()
-local pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-        local split = string.split(pingvalue,'(')
-        local ping = tonumber(split[1])
-        if ping > 200 and ping < 300 then 
-            getgenv().Predictio = 0.18742
-            elseif ping > 180 and ping < 195 then 
-            getgenv().Predictio = 0.16779123
-          elseif ping > 140 and ping < 180 then 
-            getgenv().Predictio = 0.16
-        elseif ping > 110 and ping < 140 then 
-            getgenv().Predictio = 0.15934
-        elseif ping < 105 then
-            getgenv().Predictio = 0.138
-        elseif ping < 90 then
-            getgenv().Predictio = 0.136
-        elseif ping < 80 then
-            getgenv().Predictio = 0.134
-        elseif ping < 70 then
-            getgenv().Predictio = 0.131
-        elseif ping < 60 then
-            getgenv().Predictio = 0.1229
-        elseif ping < 50 then
-            getgenv().Predictio = 0.1225
-        elseif ping < 40 then
-            getgenv().Predictio = 0.1256
-        end
-getgenv().Prediction = getgenv().Predictio
- 
-end
-end
- 
-spawn(h)
-end
+getgenv().AimPart = "HumanoidRootPart" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}
+getgenv().AimlockToggleKey = "Y" -- Toggles Aimbot On/Off 
+getgenv().AimRadius = 120 -- How far away from someones character you want to lock on at
+getgenv().ThirdPerson = false -- Locking onto someone in your Third Person POV
+getgenv().FirstPerson = true -- Locking onto someone in your First Person POV
+getgenv().TeamCheck = false -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
+getgenv().PredictMovement = true -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
+getgenv().PredictionVelocity = 7--The speed of the PredictMovement feature 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zxciaz/Universal-Scripts/main/Aimbot", true))()
